@@ -1,0 +1,285 @@
+/* 
+ * Mistral OCR App 样式表
+ * 混合了苹果和谷歌的设计风格
+ * 创建一个简洁现代的UI
+ */
+
+/* 全局应用样式 */
+QWidget {
+    font-family: "Segoe UI", "SF Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #202124;
+    background-color: #FFFFFF;
+}
+
+/* 深色模式 */
+QWidget[theme="dark"] {
+    color: #E8EAED;
+    background-color: #202124;
+}
+
+/* 主窗口 */
+QMainWindow {
+    background-color: #F8F9FA;
+}
+
+QMainWindow[theme="dark"] {
+    background-color: #202124;
+}
+
+/* 标签 */
+QLabel {
+    color: #5F6368;
+}
+
+QLabel[theme="dark"] {
+    color: #9AA0A6;
+}
+
+QLabel#titleLabel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #202124;
+    padding: 10px;
+}
+
+QLabel#titleLabel[theme="dark"] {
+    color: #E8EAED;
+}
+
+QLabel#statusLabel {
+    color: #5F6368;
+    padding: 5px;
+}
+
+QLabel#statusLabel[theme="dark"] {
+    color: #9AA0A6;
+}
+
+/* 按钮 */
+QPushButton {
+    background-color: #1A73E8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+QPushButton:hover {
+    background-color: #1967D2;
+}
+
+QPushButton:pressed {
+    background-color: #185ABC;
+}
+
+QPushButton:disabled {
+    background-color: #DADCE0;
+    color: #9AA0A6;
+}
+
+QPushButton[theme="dark"] {
+    background-color: #8AB4F8;
+    color: #202124;
+}
+
+QPushButton[theme="dark"]:hover {
+    background-color: #93C5FD;
+}
+
+QPushButton[theme="dark"]:pressed {
+    background-color: #7DA9F2;
+}
+
+QPushButton[theme="dark"]:disabled {
+    background-color: #303134;
+    color: #5F6368;
+}
+
+QPushButton#secondaryButton {
+    background-color: #F8F9FA;
+    color: #1A73E8;
+    border: 1px solid #DADCE0;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: #F1F3F4;
+}
+
+QPushButton#secondaryButton:pressed {
+    background-color: #E8EAED;
+}
+
+QPushButton#secondaryButton[theme="dark"] {
+    background-color: #303134;
+    color: #8AB4F8;
+    border: 1px solid #5F6368;
+}
+
+QPushButton#secondaryButton[theme="dark"]:hover {
+    background-color: #3C4043;
+}
+
+QPushButton#secondaryButton[theme="dark"]:pressed {
+    background-color: #444749;
+}
+
+/* 输入框 */
+QLineEdit, QTextEdit {
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #FFFFFF;
+    selection-background-color: #CCDDF1;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #1A73E8;
+}
+
+QLineEdit[theme="dark"], QTextEdit[theme="dark"] {
+    border: 1px solid #5F6368;
+    background-color: #303134;
+    color: #E8EAED;
+    selection-background-color: #174EA6;
+}
+
+QLineEdit:focus[theme="dark"], QTextEdit:focus[theme="dark"] {
+    border: 2px solid #8AB4F8;
+}
+
+/* 进度条 */
+QProgressBar {
+    border: none;
+    border-radius: 2px;
+    background-color: #E8EAED;
+    text-align: center;
+    color: #FFFFFF;
+    height: 8px;
+}
+
+QProgressBar::chunk {
+    background-color: #1A73E8;
+    border-radius: 2px;
+}
+
+QProgressBar[theme="dark"] {
+    background-color: #3C4043;
+}
+
+QProgressBar::chunk[theme="dark"] {
+    background-color: #8AB4F8;
+}
+
+/* 下拉菜单 */
+QComboBox {
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #FFFFFF;
+    selection-background-color: #CCDDF1;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 20px;
+    border-left: none;
+}
+
+QComboBox[theme="dark"] {
+    border: 1px solid #5F6368;
+    background-color: #303134;
+    color: #E8EAED;
+    selection-background-color: #174EA6;
+}
+
+/* 滚动条 */
+QScrollBar:vertical {
+    border: none;
+    background: #F1F3F4;
+    width: 8px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #DADCE0;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar[theme="dark"]:vertical {
+    background: #303134;
+}
+
+QScrollBar::handle[theme="dark"]:vertical {
+    background: #5F6368;
+}
+
+/* 拖放区域 */
+QWidget#dropArea {
+    border: 2px dashed #DADCE0;
+    border-radius: 8px;
+    background-color: #F8F9FA;
+    padding: 20px;
+}
+
+QWidget#dropArea[theme="dark"] {
+    border: 2px dashed #5F6368;
+    background-color: #303134;
+}
+
+QWidget#dropArea[dragOver="true"] {
+    border: 2px dashed #1A73E8;
+    background-color: #E8F0FE;
+}
+
+QWidget#dropArea[dragOver="true"][theme="dark"] {
+    border: 2px dashed #8AB4F8;
+    background-color: #24292F;
+}
+
+/* 分组框 */
+QGroupBox {
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    margin-top: 1.5ex;
+    padding: 10px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    color: #5F6368;
+}
+
+QGroupBox[theme="dark"] {
+    border: 1px solid #5F6368;
+}
+
+QGroupBox::title[theme="dark"] {
+    color: #9AA0A6;
+}
+
+/* 工具提示 */
+QToolTip {
+    border: 1px solid #DADCE0;
+    background-color: #FFFFFF;
+    color: #5F6368;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+QToolTip[theme="dark"] {
+    border: 1px solid #5F6368;
+    background-color: #303134;
+    color: #9AA0A6;
+} 
