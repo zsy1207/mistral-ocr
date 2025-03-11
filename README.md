@@ -82,11 +82,6 @@ python package_app.py
 2. 注册/登录成功后，前往API密钥页面：[https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/)
 3. 点击"Create new key"（创建新密钥）按钮
 4. 为您的密钥命名并设置过期日期
-5. 点击创建并复制生成的API密钥（注意：密钥只会显示一次，请妥善保存）
-6. 在应用程序中输入API密钥并验证
-
-注意：使用Mistral AI API需要有效的付款方式，可能会产生费用。详情请参考Mistral AI的[价格页面](https://mistral.ai/pricing/)。
-
 ## 许可证
 
 [MIT License](LICENSE) 
